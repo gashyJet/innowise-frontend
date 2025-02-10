@@ -33,12 +33,12 @@ export const LoginForm = () => {
             </div>
           </div>
           <div className="mt-4">
-            <label
+            <Label
               className="mb-3 mt-5 block text-xs font-medium text-gray-900"
               htmlFor="password"
             >
               Password
-            </label>
+            </Label>
             <div className="relative">
               <Input
                 className={`peer block w-full rounded-md border border-gray-200 py-[9px] 
