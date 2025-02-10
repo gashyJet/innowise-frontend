@@ -1,5 +1,3 @@
-"use client";
-
 import { Input } from "@/components/ui/input";
 import { Compass, Heart, House, SearchIcon, SquarePlus } from "lucide-react";
 import Image from "next/image";
@@ -30,7 +28,7 @@ export const Header = () => {
           className="w-full pl-9 bg-card"
         />
       </div>
-      <div className="flex items-center justify-center gap-2">
+      <nav className="flex items-center justify-center gap-2">
         {/* Home */}
         <Link href="/" className="p-2">
           <House width={22} height={22} />
@@ -47,7 +45,7 @@ export const Header = () => {
         <Link href="/" className="p-2">
           <Heart width={22} height={22} />
         </Link>
-      </div>
+      </nav>
     </header>
   );
 };

@@ -1,6 +1,7 @@
-import { ArrowRightIcon, KeyIcon } from "lucide-react";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
+import { ArrowRightIcon, KeyIcon, MailIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components//ui/input";
+import { Label } from "@/components/ui/label";
 
 export const LoginForm = () => {
   return (
@@ -9,12 +10,12 @@ export const LoginForm = () => {
         <h1 className="mb-3 text-2xl">Please log in to continue.</h1>
         <div className="w-full">
           <div>
-            <label
+            <Label
               className="mb-3 mt-5 block text-xs font-medium text-gray-900"
               htmlFor="email"
             >
               Email
-            </label>
+            </Label>
             <div className="relative">
               <Input
                 className={`peer block w-full rounded-md border border-gray-200 
@@ -24,6 +25,10 @@ export const LoginForm = () => {
                 name="email"
                 placeholder="Enter your email address"
                 required
+              />
+              <MailIcon
+                className={`pointer-events-none absolute left-3 top-1/2 h-[22px] w-[22px]
+                   -translate-y-1/2 text-gray-500 peer-focus:text-gray-900`}
               />
             </div>
           </div>
@@ -46,7 +51,7 @@ export const LoginForm = () => {
                 minLength={6}
               />
               <KeyIcon
-                className={`pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px]
+                className={`pointer-events-none absolute left-3 top-1/2 h-[22px] w-[22px]
                    -translate-y-1/2 text-gray-500 peer-focus:text-gray-900`}
               />
             </div>
@@ -55,14 +60,7 @@ export const LoginForm = () => {
         <Button className="mt-4 w-full">
           Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
-        <div className="flex h-8 items-end space-x-1">
-          {/* {errorMessage && (
-          <>
-            <Icon />
-            <p className="text-sm text-red-500">{errorMessage}</p>
-          </>
-        )} */}
-        </div>
+        <div className="flex h-8 items-end space-x-1"></div>
       </div>
     </form>
   );
