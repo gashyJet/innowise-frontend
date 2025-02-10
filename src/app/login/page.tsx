@@ -1,4 +1,4 @@
-import { LoginForm } from "@/components/LoginForm/LoginForm";
+import { LoginForm } from "@/components/LoginForm";
 import { LogInIcon } from "lucide-react";
 import { Metadata } from "next";
 import { Suspense } from "react";
